@@ -1,31 +1,21 @@
-# Node.js (backend)
-backend/node_modules/
-backend/dist/
-backend/.env
-backend/*.log
-
-# Frontend (React / Vite / CRA)
-frontend/node_modules/
-frontend/dist/
-frontend/.env
-frontend/*.log
-
-# Root
+# Node.js
 node_modules/
 dist/
 .env
 *.log
 
-# IDE / Editors
+# IDE
 .idea/
 .vscode/
-*.sublime-workspace
-*.sublime-project
 
-# OS
-.DS_Store
-Thumbs.db
+# Frontend
+frontend/node_modules/
+frontend/dist/
 
-# Misc
-npm-debug.log*
-yarn-error.log*
+# Backend
+backend/node_modules/
+backend/dist/
+
+# lock files
+yarn.lock
+package-lock.json

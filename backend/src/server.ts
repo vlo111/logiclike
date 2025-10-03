@@ -1,20 +1,26 @@
-import Fastify from 'fastify';
-import { ideasRoutes } from './routes/ideas';
-import { votesRoutes } from './routes/votes';
+import Fastify from "fastify";
+import cors from "@fastify/cors";
 
-const fastify = Fastify({ logger: true });
+const app = Fastify();
 
-fastify.register(ideasRoutes, { prefix: '/api' });
-fastify.register(votesRoutes, { prefix: '/api' });
+await app.register(cors, {
+    origin: "*",
+});
 
-const start = async () => {
+app.get("/api/ideas", async () => {
+    return [{ id: 1, title: "First idea from Fastify" }];
+});
+
+const PORT = 3000;
+
+async function start() {
     try {
-        await fastify.listen({ port: 3000, host: '0.0.0.0' });
-        console.log('Server running on http://localhost:3000');
+        await app.listen({ port: PORT, host: "0.0.0.0" });
+        console.log(`🚀 Fastify server running at http://localhost:${PORT}`);
     } catch (err) {
-        fastify.log.error(err);
+        app.log.error(err);
         process.exit(1);
     }
-};
+}
 
 start();
