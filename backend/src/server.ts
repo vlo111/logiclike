@@ -1,5 +1,7 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
+import {ideasRoutes} from "./routes/ideas";
+import {votesRoutes} from "./routes/votes";
 
 const app = Fastify();
 
@@ -7,9 +9,8 @@ await app.register(cors, {
     origin: "*",
 });
 
-app.get("/api/ideas", async () => {
-    return [{ id: 1, title: "First idea from Fastify" }];
-});
+await app.register(ideasRoutes, { prefix: "/api" });
+await app.register(votesRoutes, { prefix: "/api" });
 
 const PORT = 3000;
 
