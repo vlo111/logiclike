@@ -1,0 +1,43 @@
+:root {
+    --bg-page: #0092F138;
+    --bg-container: white;
+    --border: #ddd;
+    --spacing: 20px;
+    --spacing-sm: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: var(--spacing);
+    background: var(--bg-page);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing);
+    background: var(--bg-container);
+}
+
+.idea-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing) 0 0;
+}
+
+.idea-item {
+    padding: var(--spacing-sm);
+    margin: 0 0 var(--spacing-sm);
+    border: 1px solid var(--border);
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

@@ -25,7 +25,7 @@ export const IdeaItem: React.FC<IdeaItemProps> = ({ idea, onVoteSuccess }) => {
     };
 
     return (
-        <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
+        <div className="idea-item">
             <h3>{idea.title}</h3>
             {idea.description && <p>{idea.description}</p>}
             <p>Votes: {idea.votesCount}</p>

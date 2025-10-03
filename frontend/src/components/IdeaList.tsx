@@ -29,10 +29,9 @@ export const IdeaList: React.FC = () => {
     if (error) return <p style={{ color: 'red' }}>Error: {error}</p>;
 
     return (
-        <div>
-            {ideas.map(idea => (
-                <IdeaItem key={idea.id} idea={idea} onVoteSuccess={loadIdeas} />
-            ))}
-        </div>
-    );
+    <ul className="idea-list">
+        {ideas.map(idea => (
+            <IdeaItem key={idea.id} idea={idea} onVoteSuccess={loadIdeas}/>
+        ))}
+    </ul>)
 };
