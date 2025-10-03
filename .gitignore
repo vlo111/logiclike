@@ -1,13 +1,31 @@
-# Node.js
+# Node.js (backend)
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/*.log
+
+# Frontend (React / Vite / CRA)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/*.log
+
+# Root
 node_modules/
 dist/
 .env
 *.log
 
-# Frontend
-frontend/node_modules/
-frontend/dist/
+# IDE / Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
 
-# Backend
-backend/node_modules/
-backend/dist/
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+npm-debug.log*
+yarn-error.log*
