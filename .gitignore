@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+dist/
+.env
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/node_modules/
+backend/dist/
