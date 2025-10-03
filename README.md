@@ -7,6 +7,8 @@ Simple full-stack project for voting on product ideas.
 ### ─ backend/ # Fastify + TypeScript backend
 ### ─ frontend/ # React + TypeScript frontend
 
+## Preview
+![Screenshot](frontend/src/assets/screenshot.jpg)
 
 ## Setup
 
@@ -41,4 +43,3 @@ Database is PostgreSQL
 Seed script available: seed.ts
 
 DB connection configured in db.ts
-
